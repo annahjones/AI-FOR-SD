@@ -1,0 +1,86 @@
+content
+
+FULL PROJECT REPORT
+Title:
+Forecasting Solar Irradiance for Clean Energy Optimization using Machine Learning
+
+SDG Focus:
+SDG 7 — Affordable and Clean Energy
+
+Problem Statement
+Clean and sustainable energy is essential for future development.
+Solar energy offers enormous potential but depends heavily on solar irradiance. Forecasting solar irradiance helps optimize solar panel installations, increase energy production efficiency, and support Kenya’s green energy transition.
+
+Dataset
+Source: NASA POWER Data (https://power.larc.nasa.gov/)
+
+Location: Kenya
+Time Range: January 2023 — December 2025
+
+Collected Parameters:
+
+ALLSKY_SFC_SW_DWN (Solar Irradiance, target variable)
+
+T2M (Temperature)
+
+RH2M (Relative Humidity)
+
+WS2M (Wind Speed)
+
+ML Approach
+Type: Supervised Learning
+
+Algorithm: Linear Regression
+
+Features used to predict Solar Irradiance:
+
+Temperature at 2 meters (T2M)
+
+Relative Humidity at 2 meters (RH2M)
+
+Wind Speed at 2 meters (WS2M)
+
+Technical Workflow
+Data Preprocessing:
+
+Converted wide format to long format.
+
+Pivoted data to align all features by date.
+
+Cleaned missing values (-999).
+
+Created date column for time-series plotting.
+
+Model Building:
+
+Train-test split (80/20)
+
+Trained Linear Regression Model
+
+Evaluated using MAE, RMSE, R² metrics.
+
+Model Performance
+MAE: 0.29 kWh/m²/day
+RMSE: 0.37 kWh/m²/day
+R² Score: 0.40
+
+Ethical Reflection
+Data Bias: Limited to one location; future work should use larger, global datasets.
+
+Fairness: Promotes equitable access to energy by improving planning.
+
+Sustainability: Accurate forecasts encourage solar energy adoption, reducing fossil fuel reliance.
+
+Tools Used
+Python (Google Colab)
+
+Pandas, NumPy, Scikit-learn, Matplotlib
+
+NASA POWER Open-Source Data
+Project Impact
+Assists government & private sector in siting and sizing solar farms.
+
+Supports Kenya's renewable energy strategy.
+
+Builds local AI capacity for climate solutions.
+
